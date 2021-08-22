@@ -64,7 +64,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-track {
-  background: #000;
+  background: linear-gradient(90deg,#ddd,#000 0.5px);
 }
 
 /* ---- Layout Rules ---- */

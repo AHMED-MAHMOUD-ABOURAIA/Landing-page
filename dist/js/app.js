@@ -19,15 +19,18 @@
  *
  */
 
+// build the nav
 function generateListItems(){
-const fragment = document.createDocumentFragment();
-const navbar = document.querySelector("#navbar__list");
-for(let i = 1; i < 6; i++) {
-  const listItem = document.createElement("li");
-  
-  const data = document.getElementById(`section${i}`)
-  const a =  data.getAttribute("data-nav");
-  
+  const fragment = document.createDocumentFragment();
+  const navbar = document.querySelector("#navbar__list");
+  // Build menu
+  for(let i = 1; i < 6; i++) {
+    const listItem = document.createElement("li");
+    
+    const data = document.getElementById(`section${i}`)
+    const a =  data.getAttribute("data-nav");
+    
+    // Scroll to section on link click
   listItem.innerHTML = `<a href="#section${i}" class="menu__link">${a}</a>`;
   
   fragment.appendChild(listItem);
@@ -36,7 +39,6 @@ navbar.appendChild(fragment);
 }
 generateListItems();
 
-// build the nav
 
 // Add class 'active' to section when near top of viewport
 
@@ -48,9 +50,7 @@ generateListItems();
  *
  */
 
-// Build menu
 
-// Scroll to section on link click
 
 // Set sections as active
 
