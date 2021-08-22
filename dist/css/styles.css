@@ -303,5 +303,29 @@ to {
             rotate(-360deg);
 }
 }
+footer button {
+  position: relative;
+  width: 10em;
+  top: 0;
+  left: 0;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-radius: 10px;
+  background:rgba(255, 255, 255, 0.187);
+  font-size: 1em;
+  padding: 0.5em 1.5em;
+}
+footer button a{
+  color: #fff;
+  text-decoration:none;
+}
+footer button:hover{
+  background: rgba(255, 255, 255, 1);
+  margin-left:0.5em;
+}
+footer button:hover a{
+  color: #000;
+  font-weight: bold;
+}
 
 /*# sourceMappingURL=style.css.map */
