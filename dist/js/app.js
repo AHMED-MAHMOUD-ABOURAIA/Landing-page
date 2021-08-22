@@ -28,7 +28,7 @@ for(let i = 1; i < 6; i++) {
   const data = document.getElementById(`section${i}`)
   const a =  data.getAttribute("data-nav");
   
-  listItem.innerHTML = `<a href="#section${i}">${a}</a>`;
+  listItem.innerHTML = `<a href="#section${i}" class="menu__link">${a}</a>`;
   
   fragment.appendChild(listItem);
 }

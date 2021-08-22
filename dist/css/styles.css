@@ -105,38 +105,42 @@ section {
   display: inline-block;
   margin: 0.8em 1em;
 }
+
 /* making the nav-bar responsive */
-@media  screen and (max-width: 768px) {
+@media  screen and (max-width: 767px) {
   .navbar__menu li {
     display: block;
-    border-bottom: 2px solid white;
     text-align: center;
     width: 100%;
+  }
+  .navbar__menu li:hover {
+    border-bottom: 2px solid white;
+    transition: ease 0.3s all;
+    padding-bottom: 1em;
   }
 
 }
 
-.navbar__menu li a {
-  text-decoration: none;
-  color: white;
-
-}
-
 .navbar__menu .menu__link {
-  display: block;
-  padding: 1em;
   font-weight: bold;
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 .navbar__menu .menu__link:hover {
-  background: #333;
-  color: #fff;
   -webkit-transition: ease 0.3s all;
   transition: ease 0.3s all;
+  padding: 1em 1.6em;
+  border: 1px solid #fff;
 }
 
+@media  screen and (max-width: 767px) {
+  .navbar__menu .menu__link:hover {
+    -webkit-transition: ease 0.3s all;
+    transition: ease 0.3s all;
+    border: none;
+  }
+}
 /* Header Styles */
 .page__header {
   background: #fff;
