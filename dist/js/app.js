@@ -1,9 +1,3 @@
-/* 
-data_nav is a textContent a has id #sectionx and class menu_list 
-for loop li to put a tags
-for of loop to put the lis then put them to a document fragment then to put it to ul
-pay attention to youractive class in css classList
-*/
 
 /**
  *
@@ -24,29 +18,23 @@ pay attention to youractive class in css classList
  * Define Global Variables
  *
  */
-const navbar = document.querySelector("#navbar__list");
-const listItem1 = document.createElement("li");
-const listItem2 = document.createElement("li");
-const listItem3 = document.createElement("li");
-const listItem4 = document.createElement("li");
-const listItem5 = document.createElement("li");
-/**
- * End Global Variables
- * Start Helper Functions
- *
- */
 
-/**
- * End Helper Functions
- * Begin Main Functions
- *
- */
-listItem1.innerHTML = "<a href='#'>Section 1</a>";
-listItem2.innerHTML = "<a href='#'>Section 2</a>";
-listItem3.innerHTML = "<a href='#'>Section 3</a>";
-listItem4.innerHTML = "<a href='#'>Section 4</a>";
-listItem5.innerHTML = "<a href='#'>Section 5</a>";
-navbar.append(listItem1, listItem2, listItem3, listItem4, listItem5);
+function generateListItems(){
+const fragment = document.createDocumentFragment();
+const navbar = document.querySelector("#navbar__list");
+for(let i = 1; i < 6; i++) {
+  const listItem = document.createElement("li");
+  
+  const data = document.getElementById(`section${i}`)
+  const a =  data.getAttribute("data-nav");
+  
+  listItem.innerHTML = `<a href="#section${i}">${a}</a>`;
+  
+  fragment.appendChild(listItem);
+}
+navbar.appendChild(fragment);
+}
+generateListItems();
 
 // build the nav
 
