@@ -22,8 +22,8 @@ body {
 /* Typeography General*/
 h1 {
   font-family: 'Fira Sans', sans-serif;
-  font-size: 3em;
-  margin: 2em 1rem;
+  font-size: 4em;
+    margin: 4em 1rem 1rem;
 }
 
 @media only screen and (min-width: 35em){
@@ -32,6 +32,12 @@ h1 {
       margin: 2em 4rem 1em;
   }
 }
+@media only screen and (max-width: 950px){
+  h1 {
+      text-align: center;
+  }
+}
+
 
 h2 {
   border-bottom: 1px solid #cc1;
@@ -47,6 +53,7 @@ p {
 
 /* ---- Layout Rules ---- */
 main {
+  position: relative;
   margin: 10vh 1em 10vh;
 }
 
@@ -64,22 +71,31 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+.navbar__menu{
+  position: relative;
+
+}
 .navbar__menu ul {
-  padding-left: 0;
+  position: relative;
+  padding: 1em 1.5em;
   margin: 0;
   text-align: right;
   background: black;
 }
 
 .navbar__menu li {
+  position: relative;
+  right: 1em;
   display: inline-block;
-  margin: 1.5em;
+  margin: 0.8em 1em;
 }
 /* making the nav-bar responsive */
 @media  screen and (max-width: 768px) {
-  
   .navbar__menu li {
     display: block;
+    border-bottom: 2px solid white;
+    text-align: center;
+    width: 100%;
   }
 
 }
