@@ -48,3 +48,15 @@ const observer = new IntersectionObserver(
   );
 sections.forEach(section => {observer.observe(section);})
 
+/* Adding a scroll to top button on the page 
+that’s only visible when the user scrolls below the fold of the page.*/
+
+window.addEventListener('scroll',() =>{
+  const totalScroll = document.documentElement.scrollHeight - window.innerHeight
+  const scroll = window.scrollY;
+  if (Math.ceil(scroll) === totalScroll){
+    const button = document.querySelector(".hide")
+    button.classList.remove("hide")
+    button.classList.add("visible")
+  }
+})
