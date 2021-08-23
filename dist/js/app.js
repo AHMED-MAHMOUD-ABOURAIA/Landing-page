@@ -1,25 +1,4 @@
-
-/**
- *
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- *
- * Dependencies: None
- *
- * JS Version: ES2015/ES6
- *
- * JS Standard: ESlint
- *
- */
-
-/**
- * Define Global Variables
- *
- */
-
-// build the nav
+// building the nav
 function generateListItems(){
   const fragment = document.createDocumentFragment();
   const navbar = document.querySelector("#navbar__list");
@@ -31,27 +10,29 @@ function generateListItems(){
     const a =  data.getAttribute("data-nav");
     
     // Scroll to section on link click
-  listItem.innerHTML = `<a href="#section${i}" class="menu__link">${a}</a>`;
-  
-  fragment.appendChild(listItem);
-}
-navbar.appendChild(fragment);
+    listItem.innerHTML = `<a href="#section${i}" class="menu__link" id="${i}">${a}</a>`;
+    
+    fragment.appendChild(listItem);
+    
+  }
+  navbar.appendChild(fragment);
 }
 generateListItems();
 
+//section smooth scroll
 
-// Add class 'active' to section when near top of viewport
+for(let i = 1; i < 6; i++) {
 
-// Scroll to anchor ID using scrollTO event
+const data = document.getElementById(`section${i}`);
 
-/**
- * End Main Functions
- * Begin Events
- *
- */
+document.getElementById(`${i}`).addEventListener("click", function(e){
+  e.preventDefault();
+  data.scrollIntoView({
+  behavior: 'smooth', block: 'center'
+    });
+  })
+}
 
-
-
-// Set sections as active
+// Adding class 'active' to section when near top of viewport
 
 //# sourceMappingURL=main.js.map
