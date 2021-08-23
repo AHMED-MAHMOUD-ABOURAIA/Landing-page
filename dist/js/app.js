@@ -35,4 +35,16 @@ document.getElementById(`${i}`).addEventListener("click", function(e){
 
 // Adding class 'active' to section when near top of viewport
 
-//# sourceMappingURL=main.js.map
+let sections = document.querySelectorAll("section");
+const observer = new IntersectionObserver(
+  (entries,observer) =>{
+    entries.forEach(entry => {
+      if(!entry.isIntersecting){
+        return;
+      }
+      entry.target.classList.add('your-active-class');
+      })
+    }
+  );
+sections.forEach(section => {observer.observe(section);})
+

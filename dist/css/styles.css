@@ -249,14 +249,24 @@ section:nth-of-type(3n + 1) .landing__container::after {
   transition: ease 0.5s all;
 }
 
-
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+
+section.hidden {
+  opacity: 0;
+  transform: translateY(5em);
+  transition: 0.5s;
+}
+
 section.your-active-class {
   background: rgb(0, 0, 0);
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 1;
+  transform: translateY(0px);
+  transition: 1s;
+  transition-delay: 0.4s;
 }
 
 section.your-active-class .landing__container::before {
@@ -331,5 +341,3 @@ footer button:hover a{
   color: #000;
   font-weight: bold;
 }
-
-/*# sourceMappingURL=style.css.map */
