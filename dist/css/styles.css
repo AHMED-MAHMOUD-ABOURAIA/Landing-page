@@ -21,9 +21,10 @@ body {
 
 /* Typeography General*/
 h1 {
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 4em;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 4em;
     margin: 4em 1rem 1rem;
+    letter-spacing: 2px;
 }
 
 @media only screen and (min-width: 35em){
@@ -111,17 +112,19 @@ section {
 
 /* making the nav-bar responsive */
 @media  screen and (max-width: 767px) {
+  .navbar__menu ul {
+    padding: 0.2em ;
+  }
   .navbar__menu li {
     display: block;
     text-align: center;
     width: 100%;
+    
   }
   .navbar__menu li:hover {
-    border-bottom: 2px solid white;
     transition: ease 0.3s all;
-    padding-bottom: 1em;
+    padding: 1.2em 0em 1.2em 0em;
   }
-
 }
 
 .navbar__menu .menu__link {
@@ -134,7 +137,7 @@ section {
   -webkit-transition: ease 0.3s all;
   transition: ease 0.3s all;
   padding: 1em 1.6em;
-  border: 1px solid #fff;
+  border: 2px solid teal;
 }
 
 @media  screen and (max-width: 767px) {
@@ -142,6 +145,7 @@ section {
     -webkit-transition: ease 0.3s all;
     transition: ease 0.3s all;
     border: none;
+    font-size: 1.6em;
   }
 }
 /* Header Styles */
@@ -176,6 +180,24 @@ section {
   .landing__container {
       max-width: 50em;
       padding: 4em;
+  }
+  section{
+    min-height: 30em;
+  }
+}
+
+@media  screen and (max-width: 767px) {
+  .landing__container {
+    font-size: 0.725em;
+  }
+  section {
+    max-height: 8em;
+    margin-top: 2em;
+  }
+}
+@media  screen and (max-width: 320px) {
+  .landing__container {
+    font-size: 0.6em;
   }
 }
 
@@ -258,7 +280,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
 
 section.hidden {
   opacity: 0;
-  transform: translateY(5em);
+  transform: translateY(0em);
   transition: 0.5s;
 }
 
@@ -267,7 +289,7 @@ section.your-active-class {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
   opacity: 1;
-  transform: translateY(0px);
+  transform: translateY(-2em);
   transition: 1s;
   transition-delay: 0.4s;
 }

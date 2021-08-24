@@ -51,7 +51,7 @@ const data = document.getElementById(`section${i}`);
 document.getElementById(`${i}`).addEventListener("click", function(e){
   e.preventDefault();
   data.scrollIntoView({
-  behavior: 'smooth', block: 'center'
+  behavior: 'smooth', block: 'end'
     });
   });
 };
