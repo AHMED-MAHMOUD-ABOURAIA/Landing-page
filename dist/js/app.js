@@ -40,7 +40,7 @@ const observer = new IntersectionObserver(
   (entries,observer) =>{
     entries.forEach(entry => {
       if(!entry.isIntersecting){
-        return;
+        return entry.target.classList.remove('your-active-class');;
       }
       entry.target.classList.add('your-active-class');
       })
