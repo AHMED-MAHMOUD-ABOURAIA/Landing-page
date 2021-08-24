@@ -56,7 +56,6 @@ window.addEventListener('scroll',() =>{
   const scroll = window.scrollY;
   if (Math.ceil(scroll) === totalScroll){
     const button = document.querySelector(".hide")
-    button.classList.remove("hide")
     button.classList.add("visible")
   }
 })
